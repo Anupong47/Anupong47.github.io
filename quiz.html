@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบทดสอบ Python Comment</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function checkAnswers() {
+            const answers = ["#", "ช่วยอธิบายโค้ด", "A", "C"];
+            let score = 0;
+
+            for (let i = 1; i <= 4; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                const resultElem = document.getElementById(`result${i}`);
+                if (selected && selected.value === answers[i - 1]) {
+                    resultElem.textContent = "ถูกต้อง!";
+                    resultElem.className = "result correct";
+                    score++;
+                } else {
+                    resultElem.textContent = "ผิด!";
+                    resultElem.className = "result incorrect";
+                }
+
+                // Disable the radio buttons after answering
+                const radios = document.querySelectorAll(`input[name="q${i}"]`);
+                radios.forEach(radio => radio.disabled = true);
+            }
+
+            // Hide the submit button and show the back button
+            document.querySelector("button.submit").style.display = 'none';
+            document.getElementById("score").textContent = `คุณได้คะแนน ${score} จาก 4`;
+            
+            // Add the back button
+            const backButton = document.createElement('a');
+            backButton.href = 'links.html';  // ใส่ลิงก์ของหน้าแรก
+            backButton.textContent = 'หน้าถัดไป';
+            backButton.className = 'back-button';
+            document.querySelector('main').appendChild(backButton);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>แบบทดสอบ: คอมเมนต์ใน Python</h1>
+    </header>
+    <main>
+        <div class="question">
+            <p>1. สัญลักษณ์ใดใช้สำหรับคอมเมนต์บรรทัดเดียวใน Python?</p>
+            <input type="radio" name="q1" value="#"> #<br>
+            <input type="radio" name="q1" value="//"> //<br>
+            <input type="radio" name="q1" value="/*"> /*<br>
+            <div id="result1" class="result"></div>
+        </div>
+
+        <div class="question">
+            <p>2. คอมเมนต์มีประโยชน์อย่างไรใน Python?</p>
+            <input type="radio" name="q2" value="ช่วยอธิบายโค้ด"> ช่วยอธิบายโค้ด<br>
+            <input type="radio" name="q2" value="เพิ่มความเร็วโปรแกรม"> เพิ่มความเร็วโปรแกรม<br>
+            <input type="radio" name="q2" value="ทำให้โปรแกรมหยุดทำงาน"> ทำให้โปรแกรมหยุดทำงาน<br>
+            <div id="result2" class="result"></div>
+        </div>
+
+        <div class="question">
+            <p>3. คำสั่งใดต่อไปนี้คือคำสั่งที่มีคอมเมนต์?</p>
+            <input type="radio" name="q3" value="A"> <code>print("Hello")  # แสดงผลข้อความ</code><br>
+            <input type="radio" name="q3" value="B"> <code>#print("Hello")</code><br>
+            <input type="radio" name="q3" value="C"> <code>print("Hello")</code><br>
+            <div id="result3" class="result"></div>
+        </div>
+
+        <div class="question">
+            <p>4. วิธีเขียนคอมเมนต์หลายบรรทัดใน Python?</p>
+            <input type="radio" name="q4" value="A"> ใช้ <code>#</code> หลายครั้ง<br>
+            <input type="radio" name="q4" value="B"> ใช้ <code>//</code><br>
+            <input type="radio" name="q4" value="C"> ใช้ <code>"""</code> หรือ <code>'''</code><br>
+            <div id="result4" class="result"></div>
+        </div>
+
+        <button class="submit" onclick="checkAnswers()">ส่งคำตอบ</button>
+        <div id="score" class="result"></div>
+    </main>
+</body>
+</html>

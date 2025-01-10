@@ -1,0 +1,180 @@
+/* File: styles.css */
+body {
+    font-family: 'Verdana', sans-serif;
+    background-color: #fff; /* สีขาว */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f57c00; /* สีส้ม */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em; /* ขนาดหัวข้อเล็กลงเล็กน้อย */
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #f57c00; /* สีส้ม */
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.example-image img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #f57c00; /* สีส้ม */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    margin-top: 20px;
+}
+
+/* ปุ่มต่างๆ */
+button, .start-button .button, .nav-buttons a, .back-button {
+    background-color: #66bb6a; /* สีเขียวอ่อนกว่า */
+    color: white;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+    display: inline-block;
+}
+
+button:hover, .start-button .button:hover, .nav-buttons a:hover, .back-button:hover {
+    background-color: #4caf50; /* สีเขียวเข้มขึ้นเล็กน้อยเมื่อ hover */
+    transform: scale(1.05);
+}
+
+button:active, .start-button .button:active, .nav-buttons a:active, .back-button:active {
+    transform: scale(0.98); /* ขนาดปุ่มเล็กลงเมื่อคลิก */
+}
+
+.start-button .button {
+    background-color: #66bb6a; /* สีเขียวอ่อนกว่า */
+    padding: 15px 32px;
+}
+
+.start-button .button:hover {
+    background-color: #4caf50; /* เขียวเข้มขึ้นเมื่อ hover */
+    transform: scale(1.05);
+}
+
+button.submit {
+    background-color: #66bb6a; /* สีเขียวอ่อนกว่า */
+    color: white;
+    font-size: 1.2em; 
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    width: 200px; 
+    margin-left: auto;
+    margin-right: auto;
+    display: block; 
+}
+
+button.submit:hover {
+    background-color: #4caf50; /* เขียวเข้มขึ้นเมื่อ hover */
+    transform: scale(1.1);  
+}
+
+button.submit:active {
+    transform: scale(0.95);  /* ขยับขนาดปุ่มเล็กลงเมื่อคลิก */
+}
+
+.back-button {
+    background-color: #66bb6a; /* สีเขียวอ่อนกว่า */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+.back-button:hover {
+    background-color: #4caf50; /* เขียวเข้มขึ้นเมื่อ hover */
+}
+
+/* ปรับการจัดเรียงองค์ประกอบในหน้า */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    flex: 1;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* เพิ่มสไตล์สำหรับคำถามแบบตัวเลือก */
+.question {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.question p {
+    margin: 0 0 10px;
+    font-size: 1.1em;
+}
+
+.question input[type="radio"] {
+    margin-right: 10px;
+}
+
+.result {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.result.correct {
+    color: green;
+}
+
+.result.incorrect {
+    color: red;
+}
+
+/* ปรับขนาดฟอนต์และข้อความ */
+@media (min-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+}

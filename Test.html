@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คู่มือการใช้งาน Python</title>
+    <style>
+        body {
+            font-family: "Sarabun", sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background: #004080;
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+        nav {
+            margin: 1rem 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 1rem;
+            color: #004080;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 2rem;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        pre {
+            background: #f4f4f4;
+            border-left: 4px solid #004080;
+            padding: 1rem;
+            overflow-x: auto;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #004080;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>คู่มือการใช้งาน Python</h1>
+    </header>
+
+    <nav>
+        <a href="home.html">หน้าแรก</a>
+        <a href="introduction.html">แนะนำ</a>
+        <a href="how-to-write.html">วิธีการเขียนคอมเมนต์</a>
+        <a href="examples.html">ตัวอย่าง</a>
+        <a href="final-notes.html">หมายเหตุเพิ่มเติม</a>
+    </nav>
+
+    <footer>
+        <p>&copy; 2025 คู่มือการใช้งาน Python</p>
+    </footer>
+</body>
+</html>
+
+<!-- หน้าแรก: home.html -->
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าแรก</title>
+</head>
+<body>
+    <div class="container">
+        <section id="home">
+            <h2>หน้าแรก</h2>
+            <p><strong>Python</strong> เป็นภาษาการเขียนโปรแกรมที่มีความนิยมสูง เนื่องจากมีโครงสร้างที่เรียบง่ายและอ่านง่าย รองรับการพัฒนาหลากหลายประเภท เช่น เว็บแอปพลิเคชัน การวิเคราะห์ข้อมูล ปัญญาประดิษฐ์ และอื่น ๆ</p>
+            <h3>วิธีการติดตั้ง Python</h3>
+            <ol>
+                <li>ไปที่เว็บไซต์ <a href="https://www.python.org/" target="_blank">python.org</a></li>
+                <li>ดาวน์โหลดเวอร์ชันล่าสุดที่เหมาะสมกับระบบปฏิบัติการของคุณ</li>
+                <li>ติดตั้งโปรแกรมตามคำแนะนำบนหน้าจอ</li>
+                <li>ตรวจสอบการติดตั้งโดยพิมพ์ <code>python --version</code> หรือ <code>python3 --version</code> บน Command Line</li>
+            </ol>
+        </section>
+    </div>
+</body>
+</html>
+
+<!-- แนะนำ: introduction.html -->
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แนะนำ</title>
+</head>
+<body>
+    <div class="container">
+        <section id="introduction">
+            <h2>แนะนำ</h2>
+            <p>คอมเมนต์ในภาษา Python คือข้อความที่ถูกละเว้นไม่ให้อ่านโดยตัวแปลภาษา (interpreter) ซึ่งมีไว้เพื่อช่วยให้โค้ดของคุณอ่านง่ายขึ้น และช่วยอธิบายการทำงานหรือวัตถุประสงค์ของโค้ด</p>
+            <p><strong>ทำไมถึงควรใช้คอมเมนต์?</strong></p>
+            <ul>
+                <li>ทำให้โค้ดอ่านง่ายและเข้าใจได้ง่ายขึ้น</li>
+                <li>ช่วยอธิบายโค้ดให้กับทีมงานหรือผู้พัฒนาอื่น ๆ</li>
+                <li>ใช้เพื่อปิดการทำงานของบางส่วนของโค้ดชั่วคราวขณะดีบัก</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
+
+<!-- วิธีการเขียนคอมเมนต์: how-to-write.html -->
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>วิธีการเขียนคอมเมนต์</title>
+</head>
+<body>
+    <div class="container">
+        <section id="how-to-write">
+            <h2>วิธีการเขียนคอมเมนต์</h2>
+            <p>Python รองรับการเขียนคอมเมนต์ 3 รูปแบบหลัก:</p>
+
+            <h3>1. คอมเมนต์แบบบรรทัดเดียว</h3>
+            <p>เริ่มต้นด้วยเครื่องหมาย <code>#</code>:</p>
+            <pre><code># นี่คือคอมเมนต์แบบบรรทัดเดียว
+print("Hello, World!")</code></pre>
+
+            <h3>2. คอมเมนต์แบบหลายบรรทัด</h3>
+            <p>ใช้เครื่องหมาย <code>#</code> หลายบรรทัด:</p>
+            <pre><code># นี่คือคอมเมนต์
+# ที่มีหลายบรรทัด
+print("Hello, Python!")</code></pre>
+
+            <h3>3. Docstrings (Documentation Strings)</h3>
+            <p>ใช้เครื่องหมายคำพูดสามตัวสำหรับการคอมเมนต์หลายบรรทัด:</p>
+            <pre><code>"""
+นี่คือคอมเมนต์หลายบรรทัด
+ที่เขียนโดยใช้ Docstrings
+"""
+print("Hello, Comments!")</code></pre>
+        </section>
+    </div>
+</body>
+</html>
+
+<!-- ตัวอย่าง: examples.html -->
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตัวอย่าง</title>
+</head>
+<body>
+    <div class="container">
+        <section id="examples">
+            <h2>ตัวอย่าง</h2>
+            <h3>1. อธิบายฟังก์ชัน</h3>
+            <pre><code>def greet():
+    # ฟังก์ชันนี้จะแสดงข้อความทักทาย
+    print("สวัสดี ผู้ใช้งาน!")</code></pre>
+
+            <h3>2. การดีบักโดยใช้คอมเมนต์</h3>
+            <pre><code># print("โค้ดบรรทัดนี้ถูกปิดใช้งานและจะไม่ทำงาน")
+print("โค้ดบรรทัดนี้จะทำงาน")</code></pre>
+        </section>
+    </div>
+</body>
+</html>
+
+<!-- หมายเหตุเพิ่มเติม: final-notes.html -->
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หมายเหตุเพิ่มเติม</title>
+</head>
+<body>
+    <div class="container">
+        <section id="final-notes">
+            <h2>หมายเหตุเพิ่มเติม</h2>
+            <p>การใช้คอมเมนต์อย่างเหมาะสมจะช่วยปรับปรุงความสามารถในการอ่านและบำรุงรักษาโค้ดได้อย่างมาก แต่อย่าเขียนคอมเมนต์ที่ไม่จำเป็นหรือยาวเกินไปจนทำให้โค้ดดูรก</p>
+            <p>สำหรับข้อมูลเพิ่มเติม สามารถเยี่ยมชม <a href="https://www.w3schools.com/python/python_comments.asp" target="_blank">W3Schools: Python Comments</a></p>
+        </section>
+    </div>
+</body>
+</html>
